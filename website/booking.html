@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Room Booking</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; /* Space between blocks */
+    align-items: center; /* Center items vertically */
+    max-width: 1200px; /* Maximum width for the container */
+    margin: 0 auto; /* Center the container */
+}
+
+.block {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    align-items: center; /* Center items vertically within each block */
+    flex: 1; /* Allow blocks to grow equally */
+    margin: 0 10px; /* Space between blocks */
+}
+
+.icon {
+    font-size: 30px;
+    width: 30px; /* Width of the icon */
+    height: 20px; /* Height of the icon */
+    margin-right: 20px; /* Space between icon and input */
+}
+
+.input-field {
+    flex: 1; /* Allow input fields to take available space */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.number-field {
+    width: 50px; /* Fixed width for number fields */
+    margin: 0 5px; /* Space between number fields */
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color:purple;
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: blue;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="block">
+            <i class="fa-solid fa-user icon"></i>
+            <input type="text" placeholder="Enter your name" class="input-field">
+        </div>
+        <div class="block">
+            <i class="fa-solid fa-bed icon"></i>
+            <select class="input-field">
+                <option value="single">Single Room</option>
+                <option value="family">Family Room</option>
+            </select>
+        </div>
+        <div class="block">
+            <label for="adults">Adults:</label>
+            <input type="number" id="adults" class="number-field" min="0" value="1">
+            <label for="kids">Kids:</label>
+            <input type="number" id="kids" class="number-field" min="0" value="0">
+            <label for="gender">Gender:</label>
+            <select id="gender" class="input-field">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+    </div>
+    <div class="btn">
+    <button type="submit">Submit</button>
+    </div>
+</body>
+</html>
